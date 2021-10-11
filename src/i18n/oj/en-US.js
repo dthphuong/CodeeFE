@@ -121,6 +121,7 @@ export const m = {
   Creator: 'Creator',
   Public: 'Public',
   Password_Protected: 'Password Protected',
+  Password_Not_Empty: 'Password can\'t be empty',
   // ContestList.vue
   Rule: 'Rule',
   OI: 'OI',
@@ -193,14 +194,15 @@ export const m = {
   // OIContestRank.vue
   Total_Score: 'Total Score',
   // ProblemList.vue
-  Problem_List: 'Problem List',
-  High: 'High',
-  Mid: 'Mid',
-  Low: 'Low',
+  Problem_Listz: 'Problem List',
+  High_: 'High',
+  Mid_: 'Mid',
+  Low_: 'Low',
   All: 'All',
   Reset: 'Reset',
   Pick_One: 'Pick one',
   Difficulty: 'Difficulty',
+  Titlez: 'Title',
   Total: 'Total',
   AC_Rate: 'AC Rate',
   // Register.vue

@@ -15,7 +15,7 @@
       <div slot="title">{{$t('m.Result_Explanation')}}</div>
       <div class="content">
         <ul>
-          <li><b>{{$t('m.Pending')}} & {{$t('m.Judging')}}</b> : {{$t('m.Pending_Judging_Description')}}</li>
+          <li><b>{{$t('m.Pending')}}</b> : {{$t('m.Pending_Judging_Description')}}</li>
           <li><b>{{$t('m.Compile_Error')}}</b> :	{{$t('m.Compile_Error_Description')}}
       </li>
           <li><b>{{$t('m.Accepted')}}</b> :	{{$t('m.Accepted_Description')}}</li>

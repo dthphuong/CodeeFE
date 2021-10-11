@@ -2,7 +2,7 @@
   <Row type="flex" :gutter="18">
     <Col :span=19>
     <Panel shadow>
-      <div slot="title">{{$t('m.Problem_List')}}</div>
+      <div slot="title">{{$t('m.Problem_Listz')}}</div>
       <div slot="extra">
         <ul class="filter">
           <li>
@@ -12,9 +12,9 @@
               </span>
               <Dropdown-menu slot="list">
                 <Dropdown-item name="">{{$t('m.All')}}</Dropdown-item>
-                <Dropdown-item name="Low">{{$t('m.Low')}}</Dropdown-item>
-                <Dropdown-item name="Mid" >{{$t('m.Mid')}}</Dropdown-item>
-                <Dropdown-item name="High">{{$t('m.High')}}</Dropdown-item>
+                <Dropdown-item name="Low">{{$t('m.Low_')}}</Dropdown-item>
+                <Dropdown-item name="Mid" >{{$t('m.Mid_')}}</Dropdown-item>
+                <Dropdown-item name="High">{{$t('m.High_')}}</Dropdown-item>
               </Dropdown-menu>
             </Dropdown>
           </li>
@@ -90,7 +90,7 @@
         tagList: [],
         problemTableColumns: [
           {
-            title: '#',
+            title: 'Mã bài',
             key: '_id',
             width: 80,
             render: (h, params) => {
@@ -111,7 +111,7 @@
             }
           },
           {
-            title: this.$i18n.t('m.Title'),
+            title: this.$i18n.t('m.Titlez'),
             width: 400,
             render: (h, params) => {
               return h('Button', {
@@ -137,14 +137,14 @@
             title: this.$i18n.t('m.Level'),
             render: (h, params) => {
               let t = params.row.difficulty
-              let color = 'blue'
+              let color = 'orange'
               if (t === 'Low') color = 'green'
-              else if (t === 'High') color = 'yellow'
+              else if (t === 'High') color = 'red'
               return h('Tag', {
                 props: {
                   color: color
                 }
-              }, this.$i18n.t('m.' + params.row.difficulty))
+              }, this.$i18n.t('m.' + params.row.difficulty + '_'))
             }
           },
           {
