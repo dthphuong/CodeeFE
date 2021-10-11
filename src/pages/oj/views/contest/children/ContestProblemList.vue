@@ -27,14 +27,36 @@
       return {
         ACMTableColumns: [
           {
-            title: '#',
+            title: this.$i18n.t('m.ProblemID'),
             key: '_id',
             sortType: 'asc',
-            width: 150
+            width: 150,
+            render: (h, params) => {
+              return h('Button', {
+                props: {
+                  type: 'text',
+                  size: 'large'
+                },
+                style: {
+                  cursor: 'pointer'
+                }
+              }, params.row._id)
+            }
           },
           {
-            title: this.$i18n.t('m.Title'),
-            key: 'title'
+            title: this.$i18n.t('m.Titlez'),
+            key: 'title',
+            render: (h, params) => {
+              return h('Button', {
+                props: {
+                  type: 'text',
+                  size: 'large'
+                },
+                style: {
+                  cursor: 'pointer'
+                }
+              }, params.row.title)
+            }
           },
           {
             title: this.$i18n.t('m.Total'),
@@ -49,12 +71,12 @@
         ],
         OITableColumns: [
           {
-            title: '#',
+            title: this.$i18n.t('m.ProblemID'),
             key: '_id',
             width: 150
           },
           {
-            title: this.$i18n.t('m.Title'),
+            title: this.$i18n.t('m.Titlez'),
             key: 'title'
           }
         ]

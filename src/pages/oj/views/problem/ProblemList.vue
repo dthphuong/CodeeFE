@@ -90,7 +90,7 @@
         tagList: [],
         problemTableColumns: [
           {
-            title: 'Mã bài',
+            title: this.$i18n.t('m.ProblemID'),
             key: '_id',
             width: 80,
             render: (h, params) => {

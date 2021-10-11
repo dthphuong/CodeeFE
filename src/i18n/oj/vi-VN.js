@@ -57,7 +57,7 @@ export const m = {
   // ACMHelper.vue
   ACM_Helper: 'ACM Helper',
   AC_Time: 'AC Time',
-  ProblemID: 'ProblemID',
+  ProblemID: 'Mã bài',
   First_Blood: 'First Blood',
   Username: 'Username',
   Checked: 'Checked',

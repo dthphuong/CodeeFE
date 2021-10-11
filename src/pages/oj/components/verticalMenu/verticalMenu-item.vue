@@ -50,6 +50,7 @@
     text-align: left;
     padding: 15px 20px;
     &:hover {
+      cursor: pointer;
       background: #f8f8f9;
       border-left: 2px solid #5cadff;
       color: #2d8cf0;
