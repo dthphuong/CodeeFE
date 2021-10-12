@@ -138,7 +138,7 @@ export const m = {
   Please_login_first: 'Vui lòng đăng nhập trước khi tham gia !',
   // ContestProblemList
   Problems_List: 'Danh sách đề bài',
-  No_Problems: 'Chưa có đề bài nào',
+  No_Problems: 'Ban tổ chức đang cân nhắc kĩ lưỡng việc lựa chọn đề bài. Bạn vui lòng đợi một xíu nhé 😄',
   // CodeMirror.vue
   Language: 'Ngôn ngữ',
   Theme: 'Giao diện trình soạn thảo',
