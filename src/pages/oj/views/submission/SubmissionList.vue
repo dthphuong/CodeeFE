@@ -64,13 +64,6 @@
         },
         columns: [
           {
-            title: this.$i18n.t('m.When'),
-            align: 'center',
-            render: (h, params) => {
-              return h('span', time.utcToLocal(params.row.create_time))
-            }
-          },
-          {
             title: this.$i18n.t('m.ID'),
             align: 'center',
             render: (h, params) => {
@@ -92,19 +85,29 @@
             }
           },
           {
-            title: this.$i18n.t('m.Status'),
-            align: 'center',
+            title: this.$i18n.t('m.Author'),
+            align: 'left',
             render: (h, params) => {
-              return h('Tag', {
-                props: {
-                  color: JUDGE_STATUS[params.row.result].color
+              return h('a', {
+                style: {
+                  'display': 'inline-block',
+                  'max-width': '150px'
+                },
+                on: {
+                  click: () => {
+                    this.$router.push(
+                      {
+                        name: 'user-home',
+                        query: {username: params.row.username}
+                      })
+                  }
                 }
-              }, this.$i18n.t('m.' + JUDGE_STATUS[params.row.result].name.replace(/ /g, '_')))
+              }, params.row.username)
             }
           },
           {
             title: this.$i18n.t('m.Problem'),
-            align: 'center',
+            align: 'left',
             render: (h, params) => {
               return h('span',
                 {
@@ -130,43 +133,40 @@
             }
           },
           {
-            title: this.$i18n.t('m.Time'),
+            title: this.$i18n.t('m.Status'),
             align: 'center',
+            render: (h, params) => {
+              return h('Tag', {
+                props: {
+                  color: JUDGE_STATUS[params.row.result].color
+                }
+              }, this.$i18n.t('m.' + JUDGE_STATUS[params.row.result].name.replace(/ /g, '_')))
+            }
+          },
+          {
+            title: this.$i18n.t('m.Language'),
+            align: 'left',
+            key: 'language'
+          },
+          {
+            title: this.$i18n.t('m.Time'),
+            align: 'left',
             render: (h, params) => {
               return h('span', utils.submissionTimeFormat(params.row.statistic_info.time_cost))
             }
           },
           {
             title: this.$i18n.t('m.Memory'),
-            align: 'center',
+            align: 'left',
             render: (h, params) => {
               return h('span', utils.submissionMemoryFormat(params.row.statistic_info.memory_cost))
             }
           },
           {
-            title: this.$i18n.t('m.Language'),
-            align: 'center',
-            key: 'language'
-          },
-          {
-            title: this.$i18n.t('m.Author'),
-            align: 'center',
+            title: this.$i18n.t('m.When'),
+            align: 'left',
             render: (h, params) => {
-              return h('a', {
-                style: {
-                  'display': 'inline-block',
-                  'max-width': '150px'
-                },
-                on: {
-                  click: () => {
-                    this.$router.push(
-                      {
-                        name: 'user-home',
-                        query: {username: params.row.username}
-                      })
-                  }
-                }
-              }, params.row.username)
+              return h('span', time.utcToLocal(params.row.create_time))
             }
           }
         ],
