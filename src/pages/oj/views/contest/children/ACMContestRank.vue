@@ -74,7 +74,7 @@
             }
           },
           {
-            title: this.$i18n.t('m.User_User'),
+            title: this.$i18n.t('m.Candidate'),
             align: 'center',
             fixed: 'left',
             width: 150,
@@ -93,12 +93,12 @@
                       })
                   }
                 }
-              }, params.row.user.username)
+              }, params.row.user.real_name ? params.row.user.real_name : params.row.user.username)
             }
           },
           {
-            title: 'AC / ' + this.$i18n.t('m.Total'),
-            align: 'center',
+            title: this.$i18n.t('m.AC_total'),
+            align: 'left',
             width: 100,
             render: (h, params) => {
               return h('span', {}, [
@@ -143,7 +143,7 @@
           toolbox: {
             show: true,
             feature: {
-              saveAsImage: {show: true, title: this.$i18n.t('m.save_as_image')}
+              saveAsImage: {show: true, title: this.$i18n.t('m.Save_as_image')}
             },
             right: '5%'
           },

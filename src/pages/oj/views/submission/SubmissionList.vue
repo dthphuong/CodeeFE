@@ -102,7 +102,7 @@
                       })
                   }
                 }
-              }, params.row.username)
+              }, params.row.real_name ? params.row.real_name : params.row.username)
             }
           },
           {

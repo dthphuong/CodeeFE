@@ -54,6 +54,7 @@ export const m = {
   TotalTime: 'TotalTime',
   Top_10_Teams: 'Top 10 Teams',
   save_as_image: 'save as image',
+  ac_total: 'AC / Total',
   // ACMHelper.vue
   ACM_Helper: 'ACM Helper',
   AC_Time: 'AC Time',

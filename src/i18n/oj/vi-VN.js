@@ -53,7 +53,9 @@ export const m = {
   download_csv: 'Xuất file CSV',
   TotalTime: 'Tổng thời gian',
   Top_10_Teams: 'Top 10 Teams',
-  save_as_image: 'Lưu thành hình ảnh',
+  Save_as_image: 'Lưu thành hình ảnh',
+  AC_total: 'AC / Tổng',
+  Candidate: 'Thí sinh',
   // ACMHelper.vue
   ACM_Helper: 'ACM Helper',
   AC_Time: 'AC Time',
