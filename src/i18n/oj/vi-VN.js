@@ -72,7 +72,7 @@ export const m = {
   Rating: 'Rating',
   // Announcements.vue
   Contest_Announcements: 'Bảng thông báo của kì thi',
-  By: 'By',
+  By: 'Bởi',
   // ApplyResetPassword.vue
   The_email_doesnt_exist: 'Email không tồn tại',
   Success: 'Thành công 🎉',
