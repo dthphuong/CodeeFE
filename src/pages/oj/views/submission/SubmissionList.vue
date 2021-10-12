@@ -106,7 +106,6 @@
             }
           },
           {
-            title: this.$i18n.t('m.Problem'),
             title: this.$i18n.t('m.Problems'),
             align: 'left',
             render: (h, params) => {
