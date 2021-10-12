@@ -1,7 +1,7 @@
 <template>
   <div id="header">
     <Menu theme="light" mode="horizontal" @on-select="handleRoute" :active-name="activeMenu" class="oj-menu">
-      <div class="logo"><span>{{website.website_name}}</span></div>
+      <a href="./"><img src='/static/Codee_nbg2.png' height="50px" class="logo"></a>
       <Menu-item name="/">
         <Icon type="home"></Icon>
         {{$t('m.Home')}}
@@ -143,8 +143,9 @@
     }
 
     .logo {
-      margin-left: 2%;
-      margin-right: 2%;
+      margin: 5px;
+      margin-left: 50px;
+      margin-right: 20px;
       font-size: 20px;
       float: left;
       line-height: 60px;
