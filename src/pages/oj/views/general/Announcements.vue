@@ -16,10 +16,17 @@
         <ul class="announcements-container" key="list">
           <li v-for="announcement in announcements" :key="announcement.title">
             <div class="flex-container">
-              <div class="title"><a class="entry" @click="goAnnouncement(announcement)">
-                {{announcement.title}}</a></div>
+              <div class="title">
+                <a class="entry" @click="goAnnouncement(announcement)">
+                {{announcement.title}}
+                </a>
+              </div>
               <div class="date">{{announcement.create_time | localtime }}</div>
               <div class="creator"> {{$t('m.By')}} {{announcement.created_by.username}}</div>
+            </div>
+            <div class="flex-container">
+              {{announcement.shortDescription}}
+              <!-- <div v-katex v-html="announcement.content" key="content" class="content-container markdown-body"></div> -->
             </div>
           </li>
         </ul>
@@ -73,6 +80,19 @@
         api.getAnnouncementList((page - 1) * this.limit, this.limit).then(res => {
           this.btnLoading = false
           this.announcements = res.data.data.results
+
+          this.announcements.forEach(announce => {
+            const isExitsHRTag = announce.content.split('<hr />').length > 0
+
+            if (isExitsHRTag) {
+              const tempDesc = announce.content.split('<hr />')[0]
+
+              announce.shortDescription = tempDesc.replace(/(<([^>]+)>)/gi, '')
+            } else {
+              announce.shortDescription = announce.content.replace(/(<([^>]+)>)/gi, '').substr(0, 100) + '...'
+            }
+          })
+
           this.total = res.data.data.total
         }, () => {
           this.btnLoading = false
