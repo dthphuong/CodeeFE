@@ -2,7 +2,7 @@
   <el-menu class="vertical_menu"
            :router="true" :default-active="currentPath">
     <a href="./">
-      <img src="/static/Codee_nbg2.png" alt="Codee Admin" width="180px" style="margin: 10px"/>
+      <img src="/static/Codee_nbg_512.png" alt="Codee Admin" width="180px" style="margin: 10px"/>
     </a>
     <el-menu-item index="/"><i class="el-icon-fa-dashboard"></i>{{$t('m.Dashboard')}}</el-menu-item>
     <el-submenu v-if="isSuperAdmin" index="general">
