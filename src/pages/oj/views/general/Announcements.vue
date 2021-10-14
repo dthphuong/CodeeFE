@@ -15,17 +15,17 @@
       <template v-if="listVisible">
         <ul class="announcements-container" key="list">
           <li v-for="announcement in announcements" :key="announcement.title">
-            <div class="flex-container">
+            <div class="flex-container" style="color: #002E7B;">
               <div class="title">
                 <a class="entry" @click="goAnnouncement(announcement)">
-                {{announcement.title}}
+                <strong>{{announcement.title}}</strong>
                 </a>
               </div>
               <div class="date">{{announcement.create_time | localtime }}</div>
               <div class="creator"> {{$t('m.By')}} {{announcement.created_by.username}}</div>
             </div>
-            <div class="flex-container">
-              {{announcement.shortDescription}}
+            <div style="margin-left: 10px;">
+              <p>{{announcement.shortDescription}}</p>
               <!-- <div v-katex v-html="announcement.content" key="content" class="content-container markdown-body"></div> -->
             </div>
           </li>
