@@ -42,7 +42,7 @@
           },
           {
             title: this.$i18n.t('m.User_User'),
-            align: 'center',
+            align: 'left',
             render: (h, params) => {
               return h('a', {
                 style: {
@@ -61,11 +61,11 @@
               }, params.row.user.username)
             }
           },
-          {
-            title: this.$i18n.t('m.mood'),
-            align: 'center',
-            key: 'mood'
-          },
+          // {
+          //   title: this.$i18n.t('m.mood'),
+          //   align: 'center',
+          //   key: 'mood'
+          // },
           {
             title: this.$i18n.t('m.Score'),
             align: 'center',
@@ -78,12 +78,12 @@
           },
           {
             title: this.$i18n.t('m.Total'),
-            align: 'center',
+            align: 'left',
             key: 'submission_number'
           },
           {
             title: this.$i18n.t('m.Rating'),
-            align: 'center',
+            align: 'left',
             render: (h, params) => {
               return h('span', utils.getACRate(params.row.accepted_number, params.row.submission_number))
             }
@@ -103,9 +103,17 @@
           toolbox: {
             show: true,
             feature: {
-              dataView: {show: true, readOnly: true},
-              magicType: {show: true, type: ['line', 'bar']},
-              saveAsImage: {show: true}
+              // dataView: {show: true, readOnly: true},
+              magicType: {
+                show: true,
+                type: ['line', 'bar', 'stack'],
+                title: {
+                  line: this.$i18n.t('m.LineChart'),
+                  bar: this.$i18n.t('m.BarChart'),
+                  stack: this.$i18n.t('m.StackChart')
+                }
+              },
+              saveAsImage: {show: true, title: this.$i18n.t('m.SaveAsImage')}
             },
             right: '10%'
           },

@@ -264,5 +264,13 @@ export const m = {
   UserHomeserSubmissions: 'Đã nộp',
   UserHomeScore: 'Điểm',
   List_Solved_Problems: 'Danh sách các bài giải đúng',
-  UserHomeIntro: 'Chưa có bài nào được giải 😫'
+  UserHomeIntro: 'Chưa có bài nào được giải 😫',
+
+  // Echarts toolbar
+  SaveAsImage: 'Lưu thành hình ảnh',
+  LineChart: 'Biểu đồ đường',
+  BarChart: 'Biểu đồ cột',
+  StackChart: 'Biểu đồ chồng',
+  DataTable: 'Bảng dữ liệu'
+
 }
